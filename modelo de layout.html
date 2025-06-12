@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome da Sua Empresa - Desenvolvimento de Software</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-color: #111827; /* bg-gray-900 */
+        }
+        .section-title {
+            @apply text-3xl font-bold text-center mb-4 text-gray-800;
+        }
+        .section-subtitle {
+            @apply text-center text-gray-600 mb-12 text-lg;
+        }
+        .service-card {
+            @apply bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300;
+        }
+        .cta-button {
+            @apply bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300;
+        }
+        /* Estilo para o menu hamburguer em telas pequenas */
+        #menu-toggle:checked + #menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600">SuaLogo</a>
+            
+            <div class="md:hidden">
+                <input type="checkbox" id="menu-toggle" class="hidden"/>
+                <label for="menu-toggle" class="text-gray-700 cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </label>
+            </div>
+
+            <ul id="menu" class="hidden md:flex md:items-center md:space-x-6 absolute md:relative top-16 left-0 md:top-0 md:left-auto w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none rounded-b-lg md:rounded-none p-4 md:p-0">
+                <li><a href="#home" class="text-gray-700 hover:text-indigo-600 font-medium block md:inline-block py-2 md:py-0">Início</a></li>
+                <li><a href="#sobre" class="text-gray-700 hover:text-indigo-600 font-medium block md:inline-block py-2 md:py-0">Sobre Nós</a></li>
+                <li><a href="#servicos" class="text-gray-700 hover:text-indigo-600 font-medium block md:inline-block py-2 md:py-0">Serviços</a></li>
+                <li><a href="#contato" class="text-gray-700 hover:text-indigo-600 font-medium block md:inline-block py-2 md:py-0">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Transformando Ideias em Soluções Digitais Inovadoras</h1>
+            <p class="text-lg md:text-xl mb-10 text-gray-300 max-w-2xl mx-auto">Somos especialistas em desenvolvimento de software sob medida para impulsionar o seu negócio.</p>
+            <a href="#contato" class="cta-button text-lg">Fale Conosco</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Sobre Nossa Empresa</h2>
+            <p class="section-subtitle">Conheça quem somos e como podemos ajudar você.</p>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Nossa+Equipe" alt="Imagem da equipe ou escritório" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                     </div>
+                <div class="md:w-1/2 text-gray-700 text-lg">
+                    <p class="mb-4">Bem-vindo à [Nome da Sua Empresa]! Somos uma equipe apaixonada por tecnologia e inovação, dedicada a criar softwares que resolvem problemas reais e agregam valor aos nossos clientes.</p>
+                    <p class="mb-4">Com anos de experiência no mercado, combinamos conhecimento técnico com uma abordagem criativa para entregar soluções robustas, escaláveis e intuitivas. Nosso compromisso é com a sua satisfação e o sucesso do seu projeto.</p>
+                    <p>Acreditamos que a colaboração e a transparência são fundamentais. Trabalhamos lado a lado com você, desde a concepção da ideia até a entrega final e o suporte contínuo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p class="section-subtitle">Oferecemos uma gama completa de soluções em desenvolvimento de software.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card">
+                    <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=Web" alt="Ícone Desenvolvimento Web" class="h-16 w-16 mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-center text-gray-800">Desenvolvimento Web</h3>
+                    <p class="text-gray-600 text-center">Criamos sites e sistemas web responsivos, modernos e otimizados para performance e SEO.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://placehold.co/100x100/10B981/FFFFFF?text=Mobile" alt="Ícone Desenvolvimento Mobile" class="h-16 w-16 mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-center text-gray-800">Aplicativos Mobile</h3>
+                    <p class="text-gray-600 text-center">Desenvolvemos aplicativos nativos e híbridos para iOS e Android, focados na experiência do usuário.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://placehold.co/100x100/F59E0B/FFFFFF?text=Cloud" alt="Ícone Soluções em Nuvem" class="h-16 w-16 mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-center text-gray-800">Soluções em Nuvem</h3>
+                    <p class="text-gray-600 text-center">Implementamos e gerenciamos infraestruturas em nuvem, garantindo escalabilidade e segurança.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://placehold.co/100x100/6366F1/FFFFFF?text=UI/UX" alt="Ícone Design UI/UX" class="h-16 w-16 mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-center text-gray-800">Design UI/UX</h3>
+                    <p class="text-gray-600 text-center">Criamos interfaces intuitivas e atraentes, focadas na melhor experiência para o usuário final.</p>
+                </div>
+                 <div class="service-card">
+                    <img src="https://placehold.co/100x100/EC4899/FFFFFF?text=Consultoria" alt="Ícone Consultoria" class="h-16 w-16 mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-center text-gray-800">Consultoria em TI</h3>
+                    <p class="text-gray-600 text-center">Oferecemos consultoria especializada para otimizar sua estratégia de tecnologia e inovação.</p>
+                </div>
+                 <div class="service-card">
+                    <img src="https://placehold.co/100x100/8B5CF6/FFFFFF?text=Sistemas" alt="Ícone Sistemas" class="h-16 w-16 mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-center text-gray-800">Sistemas Sob Medida</h3>
+                    <p class="text-gray-600 text-center">Desenvolvemos sistemas personalizados para atender às necessidades específicas do seu negócio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-16 md:py-24 bg-gray-800 text-gray-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4 text-white">Entre em Contato</h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Vamos conversar sobre o seu próximo projeto!</p>
+            
+            <div class="max-w-2xl mx-auto bg-white text-gray-800 p-8 rounded-lg shadow-xl">
+                <form action="#" method="POST"> <div class="mb-6">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                        <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" placeholder="Seu Nome">
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                        <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" placeholder="seu.email@exemplo.com">
+                    </div>
+                    <div class="mb-6">
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Assunto</label>
+                        <input type="text" name="subject" id="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" placeholder="Assunto da Mensagem">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                        <textarea name="message" id="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" placeholder="Digite sua mensagem aqui..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="cta-button w-full md:w-auto">Enviar Mensagem</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-10 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; <span id="currentYear"></span> [Nome da Sua Empresa]. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Desenvolvido com ❤️ por [Nome da Sua Empresa]</p>
+            <!-- 
+            <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            Se for usar ícones do Font Awesome, adicione o link no <head>:
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+            -->
+        </div>
+    </footer>
+
+    <script>
+        // Atualiza o ano no rodapé
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Lógica para fechar o menu hamburguer ao clicar em um link (opcional)
+        const menuLinks = document.querySelectorAll('#menu a');
+        const menuToggle = document.getElementById('menu-toggle');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) { // Tailwind 'md' breakpoint
+                    menuToggle.checked = false;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
